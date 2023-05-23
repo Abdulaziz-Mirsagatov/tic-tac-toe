@@ -25,9 +25,10 @@ function App() {
         return arr;
       });
       // It works becase values is not re-rendered and updated until this function finishes (I think)
-      if (values[index] === null) setTurn((turn) => !turn);
-
-      setNumMoves((num) => num + 1);
+      if (values[index] === null) {
+        setTurn((turn) => !turn);
+        setNumMoves((num) => num + 1);
+      }
     }
   }
 
